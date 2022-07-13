@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #161a20;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+button {
+    background-color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    filter: brightness(0.8);
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+input {
+    outline: none;
+    border: 3px solid transparent;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #0083ff;
+}
+
+input:invalid {
+    border-color: #6b1a1a;
+    color: white;
+    box-shadow: none;
+}
+
+/* have to use type since of specifity */
+input[type='text']:invalid {
+    background-color: #9b3a3a;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generic-btn {
+    color: white;
+    border-radius: 5px;
+}
+
+.red {
+    background-color: #b84457;
+}
+
+.green {
+    background-color: #006e6d;
+}
+
+.generic-btn:disabled {
+    background-color: #444444;
+}
+
+.button-clicked {
+    animation: 0.1s ease-in-out button-click;
+}
+
+.hidden {
+    display: none;
+}
+
+.transparent-dark-bg {
+    background-color: #111111c2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+@keyframes button-click {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
